@@ -102,6 +102,11 @@ class OrderItem(models.Model):
     def tag_product_related(self):
         return f'{self.product_related.title}'
 
+    def tag_product_rating(self):
+        return f'{self.product_related.rating}'
+
+    def tag_product_image(self):
+        return f'{self.product_related.image}'
 
 @receiver(post_delete, sender=OrderItem)
 def update_order(sender, instance, *args, **kwargs):

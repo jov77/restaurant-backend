@@ -29,7 +29,7 @@ class OrderDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Order
-        fields = ['id', 'title' , 'tag_value', 'table', 'tag_table', 'active']
+        fields = ['id', 'title' , 'tag_value', 'table', 'tag_table', 'active' ]
 
 
 class OrderItemListSerializer(serializers.ModelSerializer):
@@ -40,7 +40,7 @@ class OrderItemListSerializer(serializers.ModelSerializer):
         fields = ['id', 'product_related', 'order_related', 
                   'value', 'qty', 'tag_total_value', 'tag_value',
                   'tag_product_related', 'tag_order_related',
-                  'url'
+                  'url' , 'tag_product_image', 'tag_product_rating'
                   ]
 
 
@@ -50,7 +50,8 @@ class OrderItemDetailSerializer(serializers.ModelSerializer):
         model = OrderItem
         fields = ['id', 'product_related', 'order_related', 
                   'value', 'qty', 'tag_total_value', 'tag_value',
-                  'tag_product_related', 'tag_order_related',
+                  'tag_product_related', 'tag_order_related', 
+                  'tag_product_image', 'tag_product_rating'
                   ]
 
 
